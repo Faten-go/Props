@@ -1,18 +1,24 @@
 import React from 'react';
-import './App.css';
-
-// import component 
-import component from"./profile/component"
-
+import Profile from './profile/Profile'
 
 function App() {
-let component=[ {fullName}, {bio},{profession}  ]
+  const handleName = fullName => alert(fullName);
   return (
-    <div>
-      <h1> checkpoint_props  </h1>
-      <component fullName="Faten" bio="hello!"  profession="student"/>
-       </div>  
+    <div style={{display:"flex",flexDirection:"column",alignItems:"center"}}>
+      
+      <Profile 
+        fullName='Faten Fadhlaoui' 
+        bio='I am a food tech engineer' 
+        profession='Learning to be a web dev'  
+        handleName={handleName}>
+      
+        <img src='/image.jpg' alt='' width="150px" />
+      
+      </Profile>
+      
+      
+    </div>
   );
-}
+} 
 
 export default App;
